@@ -365,6 +365,6 @@ addReady();
 addReady();
 addReady();
 
-setInterval(function(){
-    console.log(mode);
-},20)
+// setInterval(function(){
+//     console.log(mode);
+// },20)

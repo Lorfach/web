@@ -6,7 +6,7 @@
         <meta name="viewport" content="user-scalable=no"/>
     </head>
     <body>
-        <div id="flyingTime" class="">1</div>
+        <!-- <div id="flyingTime" class="">1</div> -->
         <div id="gamestop">
             <div id="tov">Time is over!</div>
             <div id="donescore">Your score: <span id="ds">0</span></div>
