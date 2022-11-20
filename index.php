@@ -3,8 +3,10 @@
         <meta charset="UTF-8">
         <title>SOU</title>
         <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="user-scalable=no"/>
     </head>
     <body>
+        <div id="flyingTime" class="">1</div>
         <div id="gamestop">
             <div id="tov">Time is over!</div>
             <div id="donescore">Your score: <span id="ds">0</span></div>
@@ -29,6 +31,9 @@
         <div id="main">
             <div id="customs">
                 Deaths  <input type="checkbox" checked="true" id="Deaths"/>
+                <br/>
+                <br/>
+                Time to kill  <input type="checkbox" checked="true" id="Ttk"/>
             </div>
             <div id="b1" class="tap"></div>
             <div id="b2" class="tap"></div>
@@ -46,6 +51,10 @@
             <div id="b14" class="tap"></div>
             <div id="b15" class="tap"></div>
             <div id="b16" class="tap"></div>
+        </div>
+
+        <div id="bl-wrap">
+            <div id="blueline"></div>
         </div>
 
         <script src="script.js"></script>

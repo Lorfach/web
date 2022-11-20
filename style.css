@@ -16,9 +16,38 @@
         color:white;
     }
 
-    100%{
+    95%{
         transform: scale(1.2);
         color:rgb(0, 194, 0);
+    }
+}
+@keyframes timeleft{
+    0%{
+        transform: scale(1);
+        color:white;
+    }
+
+    95%{
+        transform: scale(1.3);
+        color:red;
+    }
+}
+@keyframes blueline{
+    0%{
+        width:600px;
+    }
+
+    100%{
+        width:0px;
+    }
+}
+@keyframes blocked{
+    3%{
+        height:100%;
+    }
+
+    97%{
+        height:0%;
     }
 }
 body{
@@ -27,6 +56,7 @@ body{
     margin:0px;
     overflow:hidden;
     color:white;
+    -webkit-tap-highlight-color: transparent;
     font-family:arial;
 }
 
@@ -74,6 +104,19 @@ body{
     margin:100px auto 0px auto;
     height:100px;
     width:300px;
+}
+
+#blocked{
+    height:100%;
+    width:100%;
+    border-radius:7px;
+    background-color:rgba(80, 80, 80, 0.7);
+    display:none;
+}
+
+.blockedanimation{
+    animation:1s blocked linear;
+    display:block !important;
 }
 
 #retry{
@@ -145,7 +188,7 @@ body{
 }
 
 .modebox{
-    background-color:#d3bf9b;
+    background-color:rgba(211, 191, 155, 1);
     height:inherit;
     transition:all 0.07s linear;
     width:270px;
@@ -173,6 +216,20 @@ body{
 #satanic{
     font-family:satanic;
     line-height:110px;
+    height:90px;
+}
+
+
+
+.modeblur{
+    z-index:10;
+    filter: blur(0.4px);
+    width:100%;
+    height:100%;
+    z-index:1000;
+    transition:1s all linear;
+    background-color:rgba(70, 70, 70, 0.5);
+    border-radius:3px;
 }
 
 #times{
@@ -214,6 +271,11 @@ body{
     margin-top:20px;
     border:2px solid #2e2e2e;
     border-bottom:0px;
+    transition:0.4s color linear;
+}
+
+.timeleftanim{
+    animation:0.2s timeleft linear;
 }
 
 #main{
@@ -254,4 +316,36 @@ body{
 
 #Deaths{
     transform: scale(1.3);
+}
+
+#Ttk{
+    transform: scale(1.3);
+}
+
+#bl-wrap{
+    width:600px;
+    height:0px;
+    padding:15px 25px 20px 25px;
+    background-color:black;
+    margin:20px auto 0px auto;
+}
+
+#blueline{
+    border:2px solid red;
+    width:600px;
+    height:2px;
+    background-color:red;
+    margin-right:0px;
+}
+
+.normal{
+    animation:0.8s blueline linear;
+}
+
+.harder{
+    animation:0.4s blueline linear;
+}
+
+.satanic{
+    animation:0.25s blueline linear;
 }
