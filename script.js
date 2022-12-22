@@ -7,7 +7,21 @@ var mode = 'normal';
 var timekill = 800;
 var killout;
 var iskilledtrue = true;
+
 document.getElementById('normal').style.filter = 'grayscale(80%)';
+
+document.getElementById('customs-open').onclick = function(){
+    if(document.getElementById('customs').style.height != '285px'){
+        document.getElementById('customs').style.height = '285px';
+        document.getElementById('OpenEmodzi').style.transform = 'rotate(90deg)';
+        document.getElementById('customs-open').style.borderBottom = '1px solid grey';
+    }else{
+        document.getElementById('customs').style.height = '15px';
+        document.getElementById('OpenEmodzi').style.transform = 'rotate(0deg)';
+        document.getElementById('customs-open').style.borderBottom = '0px';
+    }
+}
+
 // Функция включения\выключения таймера
 function timeLeft(){
     let x = document.getElementById('timeleft');
@@ -16,9 +30,16 @@ function timeLeft(){
         x.textContent = time;
 
         if(time <= 4 || time > -1){
-            if(time <= 4){
-                x.style.color = 'red';
+            if(time <= 3){
+                x.style.color = '#FF3F49';
                 x.classList.add('timeleftanim');
+                document.getElementById('flyingTime').textContent = time;
+                // можно убрать
+                document.getElementById('flyingTime').classList.add('flyingTime');
+                // можно убрать
+                setTimeout(function(){
+                    document.getElementById('flyingTime').classList.remove('flyingTime');
+                },390)
                 setTimeout(function(){
                     x.classList.remove('timeleftanim');
                 },200)
@@ -368,3 +389,5 @@ addReady();
 // setInterval(function(){
 //     console.log(mode);
 // },20)
+
+console.log(window.innerHeight);

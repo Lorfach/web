@@ -6,7 +6,8 @@
         <meta name="viewport" content="user-scalable=no"/>
     </head>
     <body>
-        <!-- <div id="flyingTime" class="">1</div> -->
+        <!-- Можно убрать -->
+        <!-- <div id="flyingTime" class="flyingTime">1</div> -->
         <div id="gamestop">
             <div id="tov">Time is over!</div>
             <div id="donescore">Your score: <span id="ds">0</span></div>
@@ -18,23 +19,29 @@
         <div id="blurall"></div>
 
         <div id="gamename">SOU</div>
-        <div id="gm-title">Game modes</div>
-        <div id="gamemodes">
-            <div class="modebox" id="normal">Normal</div>
-            <div class="modebox" id="harder">Harder</div>
-            <div class="modebox" id="satanic">Satanic</div>
+        <div id="gamemodes-wrapper">
+            <div id="gm-title">Game modes</div>
+            <div id="gamemodes">
+                <div class="modebox" id="normal">Normal</div>
+                <div class="modebox" id="harder">Harder</div>
+                <div class="modebox" id="satanic">Satanic</div>
+            </div>
         </div>
         <div id="times">
             <div id="score"><div>0</div></div>
             <div id="timeleft">0</div>
         </div>
+        <div id="customs">
+            <div id="customs-open">Additional <div id="OpenEmodzi">&#10095;</div></div>
+            <br/>
+            <br/>
+            Deaths  <input type="checkbox" checked="true" id="Deaths"/>
+            <br/>
+            <br/>
+            Time to kill  <input type="checkbox" checked="true" id="Ttk"/>
+        </div>
         <div id="main">
-            <div id="customs">
-                Deaths  <input type="checkbox" checked="true" id="Deaths"/>
-                <br/>
-                <br/>
-                Time to kill  <input type="checkbox" checked="true" id="Ttk"/>
-            </div>
+            
             <div id="b1" class="tap"></div>
             <div id="b2" class="tap"></div>
             <div id="b3" class="tap"></div>
